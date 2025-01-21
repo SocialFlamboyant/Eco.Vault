@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* Algemene stijlen
+
+/* Define the custom font */
+@font-face {
+  font-family: 'hanson'; /* Define a custom font name */
+  src: url('fonts/Hanson-Bold.otf') format('opentype'); /* Use the correct relative path */
+  font-weight: bold; /* Specify that it's a bold font */
+  font-style: normal; /* It's a bold style but not an italic one */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; 
+  width: 100%; 
+  background-color: #D4E0E0;
+  color: #333;
+}
+
+main {
+  margin: 0; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip-link */
+/* <!-- https://www.w3schools.com/accessibility/accessibility_skip_links.php --> */
+
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+/* Navbar */
+.navbar {
+  background-image: url(images/wall.png);
+  background-size: cover;
+  border: 0.1em solid black;
+  padding: 1em 5%;
+  position: sticky;
+  display: flex;
+  top: 0; 
+  z-index: 1000;
+}
+.navbar img {
+  width: 5em; 
+  height: 5.5em; 
+  margin-right: 5em;
+  margin-top: 1em;
+  border-radius: 0em;
+  object-fit: fill; 
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.nav-links .brand {
+  margin-right: auto;
+}
+
+.nav-links a {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 0.2em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.nav-links a:focus {
+  outline: 2px dashed #0056b3;
+}
+
+/* Sectie stijlen */
+/* .box {
+  display: flex;
+  background: #fff;
+  border: 0.1em solid #ddd;
+  border-radius: 0.5em;
+  box-shadow: 0 0.15em 0.25em rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+.episode {
+  display: flex;
+  background: #fff;
+  border: 0.1em solid #ddd;
+  border-radius: 0.5em;
+  box-shadow: 0 0.15em 0.25em rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 0.1em solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 0.15em 0.25em rgba(0, 0, 0, 0.1);
+  gap: 1em;
+} */
+
+
+
+.beginscherm {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Voeg deze regel toe om de container de volledige breedte te laten gebruiken */
+  height: 100%; /* Voeg deze regel toe om de container de volledige hoogte te laten gebruiken */
+}
+
+.vault {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Zorg ervoor dat de vault de volledige breedte gebruikt */
+}
+
+.vault img {
+  width: 100%; /* Zorg ervoor dat de afbeelding de volledige breedte van de container heeft */
+  height: auto; /* Houd de verhoudingen van de afbeelding intact */
+  border-radius: 0em;
+  object-fit: cover; /* Dit zorgt ervoor dat de afbeelding de container volledig vult zonder de verhoudingen te verliezen */
+}
+
+.kopjes {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  position: relative; /* Hiermee maken we de container het referentiepunt voor absolute positionering */
+}
+
+.eco-vault {
+  display: flex;
+  flex-direction: column;
+  align-items: start; /* Centreer de inhoud horizontaal */
+  padding-left: 2em; /* Voeg ruimte toe aan de rechterkant voor de tekst */
+}
+
+.content {
+  padding-right: 10em; /* Zorg ervoor dat de tekst ruimte heeft voor de afbeelding aan de rechterkant */
+  /* This targets only <h2> elements inside <article> elements */
+}
+
+
+
+.duurzaamheid {
+  display: flex;
+  flex-direction: column;
+  align-items: start; /* Centreer de inhoud horizontaal */
+  padding-left: 2em; /* Voeg ruimte toe aan de rechterkant voor de tekst */
+}
+
+.duurzaamheid img {
+  width: 20em;
+  height: 10em;
+  object-fit: fill;
+  border-radius: 0em;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  margin-top: 1em; /* Ruimte boven de afbeelding, zodat het niet te dicht bij de h2 zit */
+  margin-bottom: 1em; /* Ruimte onder de afbeelding */
+}
+
+.content {
+  text-align: start;
+  padding-left: 0em; 
+}
+
+
+.frankenstein {
+  display: flex;
+  flex-direction: column;
+  align-items: start; /* Centreer de inhoud horizontaal */
+  padding-left: 2em;
+}
+
+.frankenstein img {
+  width: 20em;
+  height: 10em;
+  object-fit: cover;
+  border-radius: 0em;
+  border: 0.2em solid black;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  margin-top: 1em; /* Ruimte boven de afbeelding, zodat het niet te dicht bij de h2 zit */
+  margin-bottom: 1em; /* Ruimte onder de afbeelding */
+}
+
+.content {
+  padding-right: 10em; /* Zorg ervoor dat de tekst ruimte heeft voor de afbeelding aan de rechterkant */
+}
+
+/* Apply the custom font to <h2> inside .content */
+
+
+
+
+
+
+
+
+/* Team sectie */
+.team-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2em 0em;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  gap: 2em;
+}
+
+.team-member {
+  background: #fff;
+  border-radius: 0.6em;
+  padding: 1.5em;
+  box-shadow: 0 0.25em 0.4em rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Typografie */
+h1 {
+  font-family: 'hanson', sans-serif; /* Use the custom font */
+  font-weight: bold; /* Ensure it's using the bold version */
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: rgb(0, 0, 0);
+}
+
+h2 {
+  font-family: 'hanson', sans-serif; /* Use the custom font */
+  font-weight: bold; /* Ensure it's using the bold version */
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: rgb(0, 0, 0);
+}
+
+.h2-5 {
+  font-family: "Gill Sans", sans-serif;
+  color: #333;
+  font-size: 1.3em;
+}
+
+h3 {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1.1em;
+  margin: 0 0 0.5em;
+  color: #333;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+h4 {
+  font-family: 'hanson', sans-serif;
+  font-size: 1em;
+  margin: 0 0 0.5em;
+  color: #333;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+p {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: rgb(51, 53, 52);
+  margin-bottom: 1em;
+  line-height: 1.6em;
+}
+
+li {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: rgb(51, 53, 52);
+  margin-bottom: 1em;
+  line-height: 1.6em;
+}
+
+/* Lijsten */
+.podcast-list {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.podcast-list li {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background-color: #444; 
+  padding: 20px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-column h3,
+.footer-column p,
+.footer-column a {
+  color: white;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  margin: 5px 0;
+}
+
+.footer-column a {
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
